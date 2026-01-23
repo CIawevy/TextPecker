@@ -291,7 +291,6 @@ def main():
     if args.ckpt_path.strip() == "" or not os.path.exists(args.ckpt_path):
         use_lora = False
     pipe = load_model(local_rank, args.model_path,args.ckpt_path,use_lora)
-    pipe = load_model(local_rank, args.model_path,args.ckpt_path)
     dataset = PromptDatasetJSONL(jsonl_path, output_dir)
     sampler = DistributedSampler(dataset, shuffle=False)
     dataloader = DataLoader(dataset, batch_size=batch_size, sampler=sampler,collate_fn=custom_collate_fn)

@@ -285,7 +285,6 @@ def main():
     if args.ckpt_path.strip() == "" or not os.path.exists(args.ckpt_path):
         use_lora = False
     pipe = load_model(local_rank, args.model_path,args.ckpt_path,use_lora)
-    pipe = load_model(local_rank, args.model_path,args.ckpt_path)
 
     ds = load_json(load_json_file)
     dataset = PromptDatasetOneIG(ds, output_dir=output_dir)
