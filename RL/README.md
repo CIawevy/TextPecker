@@ -1,4 +1,4 @@
-**Our RL framework is built upon [Flow-GRPO](https://github.com/yifan123/flow_grpo). We provide training code for optimizing text rendering models with TextPecker Reward.**
+Our RL framework is built upon [Flow-GRPO](https://github.com/yifan123/flow_grpo). We provide training code for optimizing text rendering models with TextPecker Reward.
 
 ## 1. Environment Setup
 
