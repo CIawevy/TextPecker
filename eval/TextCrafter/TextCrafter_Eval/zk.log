@@ -1,0 +1,44 @@
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1104: Client environment:zookeeper.version=zookeeper C client 3.5.9
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1108: Client environment:host.name=n136-113-078
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1115: Client environment:os.name=Linux
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1116: Client environment:os.arch=5.4.143.bsk.7-amd64
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1117: Client environment:os.version=#5.4.143.bsk.7 SMP Debian 5.4.143.bsk.7 Mon Jul 4 02:44:14 UTC 2
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1125: Client environment:user.name=(null)
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1133: Client environment:user.home=/home/tiger
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@log_env@1145: Client environment:user.dir=/mnt/bn/ocr-doc-nas/zhuhanshen/project/GenText-Eval/TextCrafter/TextCrafter_Eval
+2025-09-09 13:01:51,134:35944(0x7f678cb44580):ZOO_INFO@zookeeper_init_internal@1188: Initiating client connection, host=2605:340:cd51:4b00:9ade:fb07:4d9b:2b69:2181,2605:340:cd51:4b00:28db:f507:4729:c713:2181,2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181,2605:340:cd51:4b00:ff3:9cbb:5a44:f1e7:2181,2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181 sessionTimeout=6000 watcher=0x7f6790a0cc20 sessionId=0 sessionPasswd=<null> context=0x7f678c7c1080 flags=0
+2025-09-09 13:01:51,139:35944(0x7f6770c7c700):ZOO_INFO@check_events@2477: initiated connection to server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181]
+2025-09-09 13:01:51,144:35944(0x7f6770c7c700):ZOO_INFO@check_events@2529: session establishment complete on server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181], sessionId=0x65001f028add8bea, negotiated timeout=10000 
+2025-09-09 13:05:11,280:57586(0x7f18c324b580):ZOO_INFO@log_env@1104: Client environment:zookeeper.version=zookeeper C client 3.5.9
+2025-09-09 13:05:11,281:57586(0x7f18c324b580):ZOO_INFO@log_env@1108: Client environment:host.name=n136-113-078
+2025-09-09 13:05:11,281:57586(0x7f18c324b580):ZOO_INFO@log_env@1115: Client environment:os.name=Linux
+2025-09-09 13:05:11,281:57586(0x7f18c324b580):ZOO_INFO@log_env@1116: Client environment:os.arch=5.4.143.bsk.7-amd64
+2025-09-09 13:05:11,281:57586(0x7f18c324b580):ZOO_INFO@log_env@1117: Client environment:os.version=#5.4.143.bsk.7 SMP Debian 5.4.143.bsk.7 Mon Jul 4 02:44:14 UTC 2
+2025-09-09 13:05:11,281:57586(0x7f18c324b580):ZOO_INFO@log_env@1125: Client environment:user.name=(null)
+2025-09-09 13:05:11,282:57586(0x7f18c324b580):ZOO_INFO@log_env@1133: Client environment:user.home=/home/tiger
+2025-09-09 13:05:11,282:57586(0x7f18c324b580):ZOO_INFO@log_env@1145: Client environment:user.dir=/mnt/bn/ocr-doc-nas/zhuhanshen/project/GenText-Eval/TextCrafter/TextCrafter_Eval
+2025-09-09 13:05:11,282:57586(0x7f18c324b580):ZOO_INFO@zookeeper_init_internal@1188: Initiating client connection, host=2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181,2605:340:cd51:4b00:ff3:9cbb:5a44:f1e7:2181,2605:340:cd51:4b00:9ade:fb07:4d9b:2b69:2181,2605:340:cd51:4b00:28db:f507:4729:c713:2181,2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181 sessionTimeout=6000 watcher=0x7f18c7113c20 sessionId=0 sessionPasswd=<null> context=0x7f18c2dc1080 flags=0
+2025-09-09 13:05:11,286:57586(0x7f18a757c700):ZOO_INFO@check_events@2477: initiated connection to server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181]
+2025-09-09 13:05:11,290:57586(0x7f18a757c700):ZOO_INFO@check_events@2529: session establishment complete on server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181], sessionId=0x65001f028add8bf0, negotiated timeout=10000 
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1104: Client environment:zookeeper.version=zookeeper C client 3.5.9
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1108: Client environment:host.name=n136-113-078
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1115: Client environment:os.name=Linux
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1116: Client environment:os.arch=5.4.143.bsk.7-amd64
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1117: Client environment:os.version=#5.4.143.bsk.7 SMP Debian 5.4.143.bsk.7 Mon Jul 4 02:44:14 UTC 2
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1125: Client environment:user.name=(null)
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1133: Client environment:user.home=/home/tiger
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@log_env@1145: Client environment:user.dir=/mnt/bn/ocr-doc-nas/zhuhanshen/project/GenText-Eval/TextCrafter/TextCrafter_Eval
+2025-09-09 13:31:00,028:93514(0x7f893ea0e580):ZOO_INFO@zookeeper_init_internal@1188: Initiating client connection, host=2605:340:cd51:4b00:ff3:9cbb:5a44:f1e7:2181,2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181,2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181,2605:340:cd51:4b00:28db:f507:4729:c713:2181,2605:340:cd51:4b00:9ade:fb07:4d9b:2b69:2181 sessionTimeout=6000 watcher=0x7f89428dac20 sessionId=0 sessionPasswd=<null> context=0x7f893e5c1080 flags=0
+2025-09-09 13:31:00,033:93514(0x7f892297c700):ZOO_INFO@check_events@2477: initiated connection to server [2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181]
+2025-09-09 13:31:00,037:93514(0x7f892297c700):ZOO_INFO@check_events@2529: session establishment complete on server [2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181], sessionId=0x66001efcee9d5932, negotiated timeout=10000 
+2025-09-09 13:31:51,181:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1104: Client environment:zookeeper.version=zookeeper C client 3.5.9
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1108: Client environment:host.name=n136-113-078
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1115: Client environment:os.name=Linux
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1116: Client environment:os.arch=5.4.143.bsk.7-amd64
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1117: Client environment:os.version=#5.4.143.bsk.7 SMP Debian 5.4.143.bsk.7 Mon Jul 4 02:44:14 UTC 2
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1125: Client environment:user.name=(null)
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1133: Client environment:user.home=/home/tiger
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@log_env@1145: Client environment:user.dir=/mnt/bn/ocr-doc-nas/zhuhanshen/project/GenText-Eval/TextCrafter/TextCrafter_Eval
+2025-09-09 13:31:51,182:104256(0x7f3b6b4b0580):ZOO_INFO@zookeeper_init_internal@1188: Initiating client connection, host=2605:340:cd51:4b00:9ade:fb07:4d9b:2b69:2181,2605:340:cd51:4b00:28db:f507:4729:c713:2181,2605:340:cd51:4b00:93b7:82f9:f8c3:a4f:2181,2605:340:cd51:4b00:ff3:9cbb:5a44:f1e7:2181,2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181 sessionTimeout=6000 watcher=0x7f3b6f378c20 sessionId=0 sessionPasswd=<null> context=0x7f3b6afc1080 flags=0
+2025-09-09 13:31:51,187:104256(0x7f3b4f37c700):ZOO_INFO@check_events@2477: initiated connection to server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181]
+2025-09-09 13:31:51,192:104256(0x7f3b4f37c700):ZOO_INFO@check_events@2529: session establishment complete on server [2605:340:cd51:4b00:5bb4:8781:ffaa:35b6:2181], sessionId=0x65001f028add8c24, negotiated timeout=10000 

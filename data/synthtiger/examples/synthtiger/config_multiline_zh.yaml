@@ -1,0 +1,171 @@
+mask_output: true
+
+vertical_prob: 0.1
+quality: [99, 100]
+visibility_check: true
+
+# 多行文本生成参数
+element_nums: [3, 10]  # 每个样本中的元素数量范围
+zaozi:
+  method_prob: 0.0           # 使用zaozi渲染的概率，1.0表示总是使用zaozi 0就是原版
+  char_types: ['delete', 'add', 'self_swap']  # 支持的字符操作类型
+  type_probs: [0.4, 0.4, 0.4]  # 各种操作类型的概率，总和应小于1以留出正确字符的概率
+corpus:
+  paths: [resources/corpus/zh_CN_1000.txt] #
+  weights: [1]
+  min_length: 1
+  max_length: 25  
+
+font:
+  paths: [resources/font-zh]
+  weights: [1]
+  size: [50, 100]  # 调整字体大小以适应多行布局
+  bold: 0.0
+
+bg_texture: #apply bg img
+  prob: 1.0
+  args:
+    json_path: resources/bg_images/background_imgs_v1_toy.json   #
+    alpha: [1 , 1] #no alpha
+    grayscale: 0
+    crop: 1 #crop to the target size
+
+texture: #apply bg img
+  prob: 0.0
+  args:
+    json_path: resources/bg_images/background_imgs_v1_toy.json   #
+    alpha: [1 , 1] #no alpha
+    grayscale: 0
+    crop: 1 #crop to the target size
+
+colormap2:
+  paths: [resources/colormap/iiit5k_gray.txt]
+  weights: [1]
+  k: 2
+  alpha: [1, 1]
+  colorize: 1
+
+colormap3:
+  paths: [resources/colormap/iiit5k_gray.txt]
+  weights: [1]
+  k: 3
+  alpha: [1, 1]
+  colorize: 1
+
+color:
+  gray: [0, 255]
+  alpha: [1, 1]
+  colorize: 1
+
+shape:
+  prob: 0.0  # 降低形变应用概率
+  args:
+    weights: [1, 3]  # 增加轻微形变的权重
+    args:
+      # 中文不适合强烈形变，降低参数值
+      - alpha: [3, 8]
+        sigma: [2, 6]
+      # 轻微形变保持不变
+      - alpha: [0, 2]
+        sigma: [0, 0.6]
+
+# 元素布局配置
+element_layout:
+  space_horizontal: [50, 200]  # 元素间水平间距范围
+  space_vertical: [10, 20]  # 行间距范围
+  length_ratio_range: [0.8, 1.0]  # 长度比例范围
+  offset_prob: 0.2  # 偏移概率
+  random_offset_range: [10, 30]  # 随机偏移范围
+  margin: 15  # 边距
+
+layout:
+  weights: [4, 1]
+  args:
+    # flow layout
+    - space: [1, 5]
+      line_align: [middle]
+    # curve layout
+    - curve: [20, 40]
+      space: [1, 5]
+      convex: 0.5
+      upward: 0.5
+
+style:
+  prob: 0.25 #0.25
+  args:
+    weights: [1, 0, 0] # 1 2 2 
+    args:
+      # text border
+      - size_ratio: [0.05, 0.15]  # 边框大小为字体大小的5%-15%
+        min_size: 1               # 最小边框1像素
+        max_size: 12              # 最大边框12像素
+        alpha: [1, 1]
+        grayscale: 0
+      # text shadow
+      - distance: [1, 6]
+        angle: [0, 360]
+        alpha: [0.3, 0.7]
+        grayscale: 0
+      # text extrusion
+      - length: [1, 5]
+        angle: [0, 360]
+        alpha: [1, 1]
+        grayscale: 0
+
+transform:
+  prob: 0.5
+  args:
+    weights: [1, 1, 1, 1, 2, 2, 3]
+    args:
+      # perspective x
+      - percents: [[0.8, 1], [1, 1]]
+        aligns: [[0, 0], [0, 0]]
+      # perspective y
+      - percents: [[1, 1], [0.8, 1]]
+        aligns: [[0, 0], [0, 0]]
+      # trapezoidate x
+      - weights: [1, 0, 1, 0]
+        percent: [0.8, 1]
+        align: [-1, 1]
+      # trapezoidate y
+      - weights: [0, 1, 0, 1]
+        percent: [0.8, 1]
+        align: [-1, 1]
+      # skew x
+      - weights: [1, 0]
+        angle: [0, 30]
+        ccw: 0.5
+      # skew y
+      - weights: [0, 1]
+        angle: [0, 10]
+        ccw: 0.5
+      # rotate
+      - angle: [0, 10]
+        ccw: 0.5
+
+pad:
+  prob: 1
+  args:
+    pxs: [[0, 10], [0, 10], [0, 10], [0, 10]]
+
+postprocess:
+  args:
+    # gaussian noise
+    - prob: 0
+      args:
+        # scale: [4, 8]
+        scale: [1, 3]
+        per_channel: 0
+    # gaussian blur
+    - prob: 0
+      args:
+        # sigma: [0, 2]
+        sigma: [0, 0.5]
+    # resample
+    - prob: 0
+      args:
+        size: [0.4, 0.4]
+    # median blur
+    - prob: 0
+      args:
+        k: [1, 1]
