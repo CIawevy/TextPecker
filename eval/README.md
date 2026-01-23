@@ -1,4 +1,4 @@
-We provide re-evaluation guidelines with TextPecker for the following benchmarks: OneIG, CVTG, LongText, TextAtlasEval, LeX-Bench, and TIIF-Bench.
+**We provide re-evaluation guidelines with TextPecker for the following benchmarks: OneIG, CVTG, LongText, TextAtlasEval, LeX-Bench, and TIIF-Bench.**
 
 ## 1️⃣ Environment Setup
 
