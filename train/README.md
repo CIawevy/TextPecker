@@ -1,4 +1,4 @@
-**TextPecker training, deployment, and evaluation are built on top of [ms-swift](https://github.com/modelscope/ms-swift).
+TextPecker training, deployment, and evaluation are built on top of [ms-swift](https://github.com/modelscope/ms-swift).
 
 We provide two model checkpoints:
 - [TextPecker-8B-Qwen3VL](https://huggingface.co/ByteDance/TextPecker-8B-Qwen3VL)
