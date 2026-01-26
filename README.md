@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://TextPecker-ai.org/">
+  <a href="https://github.com/CIawevy/TextPecker">
     <img
       src="https://img.shields.io/badge/TextPecker-Website-0A66C2?logo=safari&logoColor=white"
       alt="TextPecker Website"
@@ -15,41 +15,47 @@
       alt="TextPecker Paper on arXiv"
     />
   </a>
-  <a href="https://huggingface.co/ByteDance-Seed/TextPecker-7B-MoT">
+  <a href="https://huggingface.co/CIawevy/TextPecker-8B-InternVL3">
     <img 
         src="https://img.shields.io/badge/TextPecker-Model-yellow?logo=huggingface&logoColor=yellow" 
         alt="TextPecker Model"
     />
   </a>
-  <a href="https://demo.TextPecker-ai.org/">
+  <a href="https://github.com/CIawevy/TextPecker/blob/main/eval/TextPecker_eval/demo.py">
     <img
       src="https://img.shields.io/badge/TextPecker-Demo-blue?logo=googleplay&logoColor=blue"
       alt="TextPecker Demo"
     />
   </a>
-  <a href="https://huggingface.co/spaces/ByteDance-Seed/TextPecker">
+   <a href="https://huggingface.co/datasets/CIawevy/TextPecker-1.5M">
+    <img 
+        src="https://img.shields.io/badge/TextPecker1.5M-Dataset-orange?logo=huggingface&logoColor=yellow" 
+        alt="TextPecker-1.5M Dataset"
+    />
+  </a>
+  <!-- <a href="https://huggingface.co/spaces/ByteDance/TextPecker">
     <img 
         src="https://img.shields.io/badge/TextPecker-Space-orange?logo=huggingface&logoColor=yellow" 
         alt="TextPecker Model"
     />
-  </a>
-  <a href="https://discord.gg/eXQNFhWe">
+  </a> -->
+  <!-- <a href="https://discord.gg/eXQNFhWe">
     <img
       src="https://img.shields.io/badge/TextPecker-Discord-5865F2?logo=discord&logoColor=purple"
       alt="TextPecker Discord"
     />
-  </a>
-  <a href="mailto:TextPecker@bytedance.com">
+  </a> -->
+  <!-- <a href="mailto:TextPecker@bytedance.com">
     <img
       src="https://img.shields.io/badge/TextPecker-Email-D14836?logo=gmail&logoColor=red"
       alt="TextPecker Email"
     />
   </a>
-</p>
+</p> -->
 
 # TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering
 
-> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en), [Yuliang Liu](https://scholar.google.com/citations?user=9uPDtI4AAAAJ&hl=zh-CN&authuser=1), [Xuecheng Wu](https://scholar.google.com/citations?user=MuTEp7sAAAAJ&hl=zh-CN), [An-Lan Wang](https://scholar.google.com/citations?user=mazWHncAAAAJ&hl=en), [Hao Feng](https://scholar.google.com/citations?user=aB8DspEAAAAJ&hl=zh-CN), [Dingkang Yang](https://scholar.google.com/citations?user=jvlDhkcAAAAJ&hl=zh-CN), [Chao Feng](https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AIfU4H7WFVeWuU5GeELC6VB1oKluoC7ZQlQxUCGcDWqHhdX2iIfDMrfcw1Jjj3dUejmTU2gS8q8ey1quzooAZ0VLTTBW4O5iVcfeqpf_7HU&user=4eEryIsAAAAJ), [Can Huang](https://scholar.google.com/citations?user=ON9Rx-IAAAAJ&hl=zh-CN), [Jingqun Tang](https://scholar.google.com/citations?user=OxQXSioAAAAJ&hl=zh-CN), [Xiang Bai](https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=en)<sup>†</sup>
+> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en), [Yuliang Liu](https://scholar.google.com/citations?user=9uPDtI4AAAAJ&hl=zh-CN&authuser=1), [Xuecheng Wu](https://scholar.google.com/citations?user=MuTEp7sAAAAJ&hl=zh-CN), [An-Lan Wang](https://scholar.google.com/citations?user=mazWHncAAAAJ&hl=en), [Hao Feng](https://scholar.google.com/citations?user=aB8DspEAAAAJ&hl=zh-CN), [Dingkang Yang](https://scholar.google.com/citations?user=jvlDhkcAAAAJ&hl=zh-CN), [Chao Feng](https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AIfU4H7WFVeWuU5GeELC6VB1oKluoC7ZQlQxUCGcDWqHhdX2iIfDMrfcw1Jjj3dUejmTU2gS8q8ey1quzooAZ0VLTTBW4O5iVcfeqpf_7HU&user=4eEryIsAAAAJ), [Can Huang](https://scholar.google.com/citations?user=ON9Rx-IAAAAJ&hl=zh-CN), [Jingqun Tang](https://scholar.google.com/citations?user=OxQXSioAAAAJ&hl=zh-CN)<sup>†</sup>, [Xiang Bai](https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=en)<sup>†</sup>
 > ## Abstract
 >Visual Text Rendering (VTR) remains a critical challenge in text‑to‑image generation, where even advanced models frequently produce text with structural anomalies such as distortion, blurriness, and misalignment.
 However, we find that leading MLLMs and specialist OCR models largely fail to perceive these structural anomalies, creating a critical bottleneck for both VTR evaluation and RL‑based optimization.   
@@ -69,17 +75,17 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 
 ## 📢 News
 
-- **Feb 1, 2026:** We released the official [website](https://bagel-ai.org/), [demo](https://demo.bagel-ai.org/), [model](https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT), [dataset](https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT) and [report](https://arxiv.org/abs/2505.14683) for TextPecker.
+- **Feb 1, 2026:** We released the official [website](https://bagel-ai.org/),[model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/CIawevy/TextPecker-1.5M) for TextPecker.
 
 
 
 ## 🔥 Quick Start
 
-Training, deployment, and evaluation of TextPecker are all built upon [ms-swift](https://github.com/modelscope/ms-swift). We currently provide two versions of model checkpoints: [TextPecker-8B-Qwen3VL](CIawevy/TextPecker-8B-Qwen3VL) and [TextPecker-8B-InternVL3](CIawevy/TextPecker-8B-InternVL3). For detailed environment setup and model deployment/testing instructions, please refer to the [official documentation](https://swift.readthedocs.io/en/latest/index.html). 
+Training, deployment, and evaluation of TextPecker are all built upon [ms-swift](https://github.com/modelscope/ms-swift). We currently provide two versions of model checkpoints: [TextPecker-8B-Qwen3VL](https://huggingface.co/CIawevy/TextPecker-8B-Qwen3VL) and [TextPecker-8B-InternVL3](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3). For detailed environment setup and model deployment/testing instructions, please refer to the [official documentation](https://swift.readthedocs.io/en/latest/index.html). 
 
 1️⃣ Environment Setup
 ```bash
-git clone https://github.com/bytedance/TextPecker.git
+git clone https://github.com/CIawevy/TextPecker.git
 cd TextPecker/train
 git clone https://github.com/modelscope/ms-swift.git
 cd ms-swift
@@ -192,7 +198,7 @@ We also thank the evaluation benchmarks including
 ## ✍️ Citation
 If you find TextPecker useful in your research or work, please cite our paper:
 ```bibtex
-@article{deng2025TextPecker,
+@article{zhu2026TextPecker,
   title   = {TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering},
   author  = {Zhu, Hanshen and Liu, Yuliang and Wu, Xuecheng and Wang, An-Lan and Feng, Hao and Yang, Dingkang and Feng, Chao and Huang, Can and Tang, Jingqun and Bai, Xiang},
   journal = {arXiv preprint arXiv:},

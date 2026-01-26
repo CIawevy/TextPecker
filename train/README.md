@@ -1,14 +1,14 @@
 TextPecker training, deployment, and evaluation are built on top of [ms-swift](https://github.com/modelscope/ms-swift).
 
 We provide two model checkpoints:
-- [TextPecker-8B-Qwen3VL](https://huggingface.co/ByteDance/TextPecker-8B-Qwen3VL)
-- [TextPecker-8B-InternVL3](https://huggingface.co/ByteDance/TextPecker-8B-InternVL3_5)
+- [TextPecker-8B-Qwen3VL](https://huggingface.co/CIawevy/TextPecker-8B-Qwen3VL)
+- [TextPecker-8B-InternVL3](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3)
 
 Here we provide example scripts for TextPecker training, deployment, and evaluation. You can refer to the [Supported Models and Datasets](https://swift.readthedocs.io/zh-cn/latest/Instruction/Supported-models-and-datasets.html) for more help.
 
 ## 1. Environment Setup
 ```bash
-git clone https://github.com/bytedance/TextPecker.git
+git clone https://github.com/CIawevy/TextPecker.git
 cd TextPecker/train
 git clone https://github.com/modelscope/ms-swift.git
 cd ms-swift

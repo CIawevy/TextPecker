@@ -7,7 +7,7 @@ import os
 from typing import Union
 import random
 import sys
-# 加入当前根目录和项目根目录到路径
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 textpecker_root = os.path.abspath(os.path.join(current_dir, os.pardir, os.pardir))
 sys.path.append(textpecker_root)

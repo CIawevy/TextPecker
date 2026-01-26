@@ -11,7 +11,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # 请将以下信息替换为您的 Hugging Face token 和本地路径
 HF_TOKEN="your_huggingface_token" #IF NEEDED
 LOCAL_DIR="your_local_path"
-TARGET="ByteDance/TextPecker-7B-Qwen3.5VL"
+TARGET="CIawevy/TextPecker-8B-InternVL3"
 
 
 cd FreeFine/scripts
