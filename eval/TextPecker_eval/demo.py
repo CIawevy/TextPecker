@@ -16,7 +16,7 @@ from parse_utils_pecker import get_score_v2, process_box_input, get_template
 
 # --- 1. VLLM Server Configuration ---
 PORT = 8848
-VLLM_HOST = "2605:340:cd60:0:90cb:803d:7dc0:99a8" #replace with your server IP ##2605:340:cd60:0:9e1c:a6fd:1ee2:d01b
+VLLM_HOST = "2605:340:cd51:4b00:9181:c6bd:19c3:330" #replace with your server IP ##2605:340:cd60:0:9e1c:a6fd:1ee2:d01b
 VLLM_BASE_URL = f"http://[{VLLM_HOST}]:{PORT}/v1" # Brackets are needed for IPv6 addresses in URLs
 VLLM_API_KEY = "EMPTY"
 MODEL_NAME = "TextPecker"

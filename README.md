@@ -92,7 +92,7 @@ sh install_all.sh
 
 2️⃣ Download Models & Dataset
 
-We have uploaded our models and datasets to Hugging Face. You can download them using the provided scripts. Modify parameters (e.g., local paths, HF token) in `scripts/download_models.sh` and `scripts/download_dataset.sh` as needed, then run `bash scripts/download_xxx.sh` (for models / datasets). Additionally, refer to [DATA](data/README.md) to use our data engine for synthesizing your own datasets if needed.
+We have uploaded our models and datasets to Hugging Face. You can download them using the provided scripts. Modify parameters (e.g., local paths, HF token) in `scripts/download_models.sh` and `scripts/download_dataset.sh` as needed, then run `bash scripts/download_xxx.sh` (for models / datasets). Additionally, refer to [DATA](https://github.com/CIawevy/TextPecker_engine) to use our data engine for synthesizing your own datasets if needed.
 
 3️⃣ Deployment （See [TRAIN](train/README.md) for more details.）
 

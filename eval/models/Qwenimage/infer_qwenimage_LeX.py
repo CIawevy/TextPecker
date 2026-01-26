@@ -13,6 +13,7 @@ import argparse
 from safetensors.torch import load_file
 from PIL import Image
 from peft import LoraConfig, get_peft_model, set_peft_model_state_dict, PeftModel
+REPEAT=2
 # 定义保存路径和模型名称
 # // 添加画廊创建函数
 # def create_image_gallery(images, rows=2, cols=2):
@@ -193,7 +194,7 @@ class PromptDatasetLeX(Dataset):
             
             # 检查当前prompt的4张图像是否已全部生成（避免重复）
             all_exist = True
-            for repeat_id in range(1, 5):  # repeat_id=1~4
+            for repeat_id in range(1, REPEAT):  # repeat_id=1~4
                 img_path = os.path.join(output_dir, f"{prompt_id}_{repeat_id}.png")
                 if not os.path.exists(img_path):
                     all_exist = False
@@ -269,10 +270,12 @@ def main():
     }
     batch_size = 1
     # 加载模型
-    use_lora=True
-    if args.ckpt_path.strip() == "" or not os.path.exists(args.ckpt_path):
+    use_lora = True
+    ckpt_path = args.ckpt_path
+    if (not ckpt_path) or (ckpt_path.strip() == "") or (not os.path.exists(ckpt_path)):
         use_lora = False
-    pipe = load_model(local_rank, args.model_path,args.ckpt_path,use_lora)
+        ckpt_path = None
+    pipe = load_model(local_rank, args.model_path, ckpt_path, use_lora)
     for key, value in LeX_DATA.items():
         # 创建输出目录（模型名称+语言，如 SD3.5_EN）
         output_dir = os.path.join(args.gallery_output_dir, f"{args.model_name}", key)
@@ -291,7 +294,7 @@ def main():
             # enhanced_prompts = [p + positive_magic[args.mode] for p in batch_prompts]
             enhanced_prompts = batch_prompts
             # 循环 4 次生成（repeat_id=1~4）
-            for repeat_id in range(1, 5):
+            for repeat_id in range(1, REPEAT):
                 print(f'gen repeat idx :{repeat_id}')
                 random_seed = random.randint(0, 2**32 - 1)
                 with torch.no_grad():

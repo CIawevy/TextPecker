@@ -60,6 +60,8 @@ for dataset in "${DATASETS[@]}"; do
     for MODEL_NAME in "${MODEL_NAMES[@]}"; do
         echo "\n处理模型: $MODEL_NAME"
         
+        PROCESS_MODEL_NAME="$MODEL_NAME"
+       
         # 设置样本目录和输出目录
         SAMPLE_FOLDER="$BASE_FOLDER/$PROCESS_MODEL_NAME"
         OUTPUT_DIR="$OUTPUT_BASE/$PROCESS_MODEL_NAME"

@@ -12,7 +12,7 @@ import argparse
 from PIL import Image
 # 加载PEFT格式LoRA权重到transformer
 from peft import LoraConfig, get_peft_model, set_peft_model_state_dict, PeftModel
-
+REPEAT = 2
 def create_image_gallery(images, rows=2, cols=2):
     assert len(images) >= rows * cols, "Not enough images provided!"
     img_width, img_height = images[0].size
@@ -81,7 +81,7 @@ class PromptDatasetLeX(Dataset):
             
             # 检查当前prompt的4张图像是否已全部生成（避免重复）
             all_exist = True
-            for repeat_id in range(1, 5):  # repeat_id=1~4
+            for repeat_id in range(1, REPEAT):  # repeat_id=1~4
                 img_path = os.path.join(output_dir, f"{prompt_id}_{repeat_id}.png")
                 if not os.path.exists(img_path):
                     all_exist = False
@@ -180,7 +180,12 @@ def main():
     }
 
     # 加载模型和数据集
+    if args.lora_path is not None and args.lora_path.strip() != "":
+        print(f'load lora_path:{args.lora_path}')
+    else:
+        print(f'no lora_path')
     pipe = load_model(local_rank, args.model_path, args.lora_path)
+    repeat_id = 2
 
     # 对三个子集循环生成
     for key, value in LeX_DATA.items():
@@ -205,7 +210,7 @@ def main():
             desc=f'Processing batches {key}'  # 替换 args.mode 为 key
         ):
             # 循环 1 次生成（repeat_id=1~4） 样本太多了影响测试效果改为1次，若4次有5240个
-            for repeat_id in range(1, 2):
+            for repeat_id in range(1, REPEAT):
                 with torch.no_grad():
                     batch_images = pipe(
                         batch_prompts,

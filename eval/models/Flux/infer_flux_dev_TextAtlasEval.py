@@ -14,7 +14,7 @@ import argparse
 from PIL import Image
 from peft import LoraConfig, get_peft_model, set_peft_model_state_dict, PeftModel
 # 定义保存路径和模型名称
-
+REPEAT=2
 # // 添加画廊创建函数
 
 def load_json(file_path):
@@ -69,7 +69,7 @@ class PromptDatasetAtlas(Dataset):
             
             # 检查当前prompt的4张图像是否已全部生成（避免重复）
             all_exist = True
-            for repeat_id in range(1, 5):  # repeat_id=1~4
+            for repeat_id in range(1, REPEAT):  # repeat_id=1~4
                 img_path = os.path.join(output_dir, f"{prompt_id}_{repeat_id}.png")
                 if not os.path.exists(img_path):
                     all_exist = False
@@ -180,7 +180,7 @@ def main():
             desc=f'Processing batches {key}'
         ):
             # 循环 4 次生成（repeat_id=1~4）
-            for repeat_id in range(1, 2):
+            for repeat_id in range(1, REPEAT):
                 with torch.no_grad():
                     batch_images = pipe(
                         batch_prompts,

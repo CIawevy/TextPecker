@@ -294,10 +294,12 @@ def main():
     }
     batch_size = 1
     # 加载模型
-    use_lora=True
-    if args.ckpt_path.strip() == "" or not os.path.exists(args.ckpt_path):
+    use_lora = True
+    ckpt_path = args.ckpt_path
+    if (not ckpt_path) or (ckpt_path.strip() == "") or (not os.path.exists(ckpt_path)):
         use_lora = False
-    pipe = load_model(local_rank, args.model_path,args.ckpt_path,use_lora)
+        ckpt_path = None
+    pipe = load_model(local_rank, args.model_path, ckpt_path, use_lora)
     for key, value in DATA.items():
         # 创建输出目录（模型名称+语言，如 SD3.5_EN）
         output_dir = os.path.join(args.gallery_output_dir, f"{args.model_name}", key)

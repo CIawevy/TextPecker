@@ -12,7 +12,7 @@ import argparse
 from PIL import Image
 # 加载PEFT格式LoRA权重到transformer
 from peft import LoraConfig, get_peft_model, set_peft_model_state_dict, PeftModel
-
+REPEAT = 2
 def create_image_gallery(images, rows=2, cols=2):
     assert len(images) >= rows * cols, "Not enough images provided!"
     img_width, img_height = images[0].size
@@ -81,7 +81,7 @@ class PromptDatasetAtlas(Dataset):
             
             # 检查当前prompt的4张图像是否已全部生成（避免重复）
             all_exist = True
-            for repeat_id in range(1, 5):  # repeat_id=1~4
+            for repeat_id in range(1, REPEAT):  # repeat_id=1~4
                 img_path = os.path.join(output_dir, f"{prompt_id}_{repeat_id}.png")
                 if not os.path.exists(img_path):
                     all_exist = False
@@ -205,7 +205,7 @@ def main():
             desc=f'Processing batches {key}'  # 替换 args.mode 为 key
         ):
             # 循环 1次生成，atlas4000张重复以后太大了推理测试成本太高
-            for repeat_id in range(1, 2):
+            for repeat_id in range(1, REPEAT):
                 with torch.no_grad():
                     batch_images = pipe(
                         batch_prompts,

@@ -206,6 +206,7 @@ def textpecker_score_vllm(vllm_host=VLLM_HOST, vllm_port=PORT):
     # 使用传入的参数，避免与全局变量混淆
     current_vllm_host = vllm_host
     current_vllm_port = vllm_port
+    print(f"Using vLLM server at {current_vllm_host}:{current_vllm_port}")
     # Format URL for IPv6 if needed
     if ":" in current_vllm_host:
         VLLM_BASE_URL = f"http://[{current_vllm_host}]:{current_vllm_port}/v1"
@@ -1248,7 +1249,7 @@ def save(new_data, output_dir):
 
 
 def main():
-    global PORT
+    global PORT, VLLM_HOST
      # 解析命令行参数
     parser = argparse.ArgumentParser(description='TextPecker Evaluation Server')
     # 添加默认值以便于调试
@@ -1306,7 +1307,7 @@ def main():
             languages_to_evaluate.append(('en', base_sample_dir, base_output_dir))
         else:
             # 尝试添加_EN后缀
-            en_sample_dir = base_sample_dir + "EN"
+            en_sample_dir = base_sample_dir + "_EN"
             en_output_dir = base_output_dir +"_EN"
             if os.path.exists(en_sample_dir):
                 languages_to_evaluate.append(('en', en_sample_dir, en_output_dir))

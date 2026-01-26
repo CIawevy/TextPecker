@@ -286,10 +286,13 @@ def main():
     if local_rank == 0:  # 仅主进程创建文件夹
         os.makedirs(output_dir, exist_ok=True)
     dist.barrier()  # 等待主进程完成文件夹创建
-    use_lora=True
-    if args.ckpt_path.strip() == "" or not os.path.exists(args.ckpt_path):
+    # 加载模型
+    use_lora = True
+    ckpt_path = args.ckpt_path
+    if (not ckpt_path) or (ckpt_path.strip() == "") or (not os.path.exists(ckpt_path)):
         use_lora = False
-    pipe = load_model(local_rank, args.model_path,args.ckpt_path,use_lora)
+        ckpt_path = None
+    pipe = load_model(local_rank, args.model_path, ckpt_path, use_lora)
     dataset = PromptDatasetJSONL(jsonl_path, output_dir)
     sampler = DistributedSampler(dataset, shuffle=False)
     dataloader = DataLoader(dataset, batch_size=batch_size, sampler=sampler,collate_fn=custom_collate_fn)

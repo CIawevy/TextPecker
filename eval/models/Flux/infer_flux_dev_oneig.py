@@ -117,6 +117,7 @@ def load_model(local_rank, model_path,lora_path=None):
     )
     # 加载PEFT LoRA权重
     if lora_path is not None and lora_path.strip() != "" and os.path.exists(lora_path):
+        print(f'############################start load lora_path:{lora_path}#########################')
         pipeline.transformer = PeftModel.from_pretrained(pipeline.transformer, lora_path)
              
     pipeline.transformer.eval()
@@ -179,6 +180,10 @@ def main():
     if local_rank == 0:  # 仅主进程创建文件夹
         os.makedirs(output_dir, exist_ok=True)
     dist.barrier()  # 等待主进程完成文件夹创建
+    if args.lora_path is not None and args.lora_path.strip() != "":
+        print(f'load lora_path:{args.lora_path}')
+    else:
+        print(f'no lora_path')
     pipe = load_model(local_rank, args.model_path,args.lora_path)
 
     ds = load_json(load_json_file)
