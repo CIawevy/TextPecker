@@ -30,7 +30,7 @@ DATASETS=(
     "gentexteval:GenTextEval/eval_results:TextPecker_eval/results/gentexteval:auto"
     "lex:LeX-Bench/eval_results:TextPecker_eval/results/lex:en"
     "atlas:TextAtlasEval/eval_results:TextPecker_eval/results/atlas:en"
-    "tiif:TIIF-Bench/eval_results:TextPecker_eval/results/tiff:en"
+    "tiif:TIIF-Bench/eval_results:TextPecker_eval/results/tiif:en"
 
 
 )

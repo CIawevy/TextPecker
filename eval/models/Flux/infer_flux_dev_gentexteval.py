@@ -155,7 +155,7 @@ def main():
     parser.add_argument(
         "--gallery_output_dir", 
         type=str, 
-        default="TextCrafter/CVTG-2K/eval_results", 
+        default="GenTextEval/eval_results", 
         help="图像保存根目录"
     )
     args = parser.parse_args()
