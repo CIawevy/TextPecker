@@ -74,8 +74,10 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 [//]: # (This repository represents the official implementation of the paper titled "TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering".)
 
 ## 📢 News
-
-- **Feb 1, 2026:** We released the official [website](https://bagel-ai.org/),[model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/CIawevy/TextPecker-1.5M) for TextPecker.
+<!-- - **Feb 22, 2026:** We released optimized model checkpoints: [Qwen Image](), [SD3.5-M](), and [Flux.1-[dev]]().
+- **Feb 20, 2026:** Our Arxiv Paper is now publicly available.
+- **Feb 20, 2026:**  TextPecker has been accepted to **CVPR 2026**. -->
+- **Feb 15, 2026:** We released the official [website](https://github.com/CIawevy/TextPecker),[model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) for TextPecker.
 
 
 
