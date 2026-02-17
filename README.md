@@ -79,7 +79,7 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 - **Feb 20, 2026:**  TextPecker has been accepted to **CVPR 2026**. -->
 - **Feb 18, 2026:** We released the LoRA weights for different TextPecker-optimized generative models, including:
 [SD3.5-M](https://huggingface.co/CIawevy/SD3.5M-TextPecker-SQPA), [Flux.1-dev](https://huggingface.co/CIawevy/Flux.1-dev-TextPecker-SQPA), [Qwen-Image](https://huggingface.co/CIawevy/QwenImage-TextPecker-SQPA). 
-- **Feb 15, 2026:** We released the official [website](https://github.com/CIawevy/TextPecker),[model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) for TextPecker.
+- **Feb 15, 2026:** We released the official [website](https://github.com/CIawevy/TextPecker), [model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) for TextPecker.
 
 
 
@@ -126,7 +126,7 @@ python eval/TextPecker_eval/demo.py
 TextPecker training, deployment, and evaluation are built on top of [ms-swift](https://github.com/modelscope/ms-swift). We provide backbone-specific training scripts under `train` folder. See [TRAIN](train) for more details.
 
   
-### VTR RL Training (TextPecker Reward)
+### VTR RL with TextPecker
 
 Our RL framework builds on [Flow-GRPO](https://github.com/yifan123/flow_grpo). We provide training code for optimizing text rendering models with TextPecker under `./RL/flow_grpo/`. For details, please refer to [RL](RL).
 
