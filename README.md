@@ -136,8 +136,9 @@ Our RL framework builds on [Flow-GRPO](https://github.com/yifan123/flow_grpo). W
 
 TextPecker can evaluate text structural quality and image-level or box-level semantic consistency for any text generation or editing scenarios. We provide re-evaluation instructions for the following benchmarks: OneIG-Bench, CVTG-2K, LongText, TextAtlas, LeX-Bench, and TIIF-Bench. For more details, see [EVAL](eval).
 
-## 🤗 Resources
-We fully open-source all core resources of the TextPecker ecosystem, including evaluators, Optimized VTR models, and datasets, to facilitate research and application development.
+## 🤗 Resource Collection
+All fully open-sourced core resources for TextPecker are listed below:
+
 ## Evaluator
 | Variant   | Model |
 | --------- | ----- |
