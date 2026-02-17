@@ -6,10 +6,10 @@ export MODELSCOPE_CACHE=your_cache_dir #replace with your own
 export HF_HOME=your_cache_dir #replace with your own
 cd TextPecker/train/ms-swift #replace with your own
 #load data online
-DATA="ByteDance/TextPecker-1.5M"
+DATA="CIawevy/TextPecker-1.5M"
 CUSTOM_DATASET_INFO='[
   {
-    "hf_dataset_id": "ByteDance/TextPecker-1.5M",
+    "hf_dataset_id": "CIawevy/TextPecker-1.5M",
     "split": ["test"],
     "subsets": ["default"]
   }
@@ -25,7 +25,7 @@ CUSTOM_DATASET_INFO='[
 # ]'
 OUTPUT_FILE=inference-output/eval_results_qwen.jsonl #replace with your own
 
-MODEL=ByteDance/TextPecker-8B-Qwen3VL
+MODEL=CIawevy/TextPecker-8B-Qwen3VL
 
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
 PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True' \

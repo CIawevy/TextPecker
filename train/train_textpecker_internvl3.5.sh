@@ -10,10 +10,10 @@ NODE_RANK=${NODE_RANK:?need node_rank}
 NPROC_PER_NODE=${NPROC_PER_NODE:-8}
 
 OUTPUT_DIR=TextPecker-InterlVL3_5-8B
-DATA="ByteDance/TextPecker-1.5M"
+DATA="CIawevy/TextPecker-1.5M"
 CUSTOM_DATASET_INFO='[
   {
-    "hf_dataset_id": "ByteDance/TextPecker-1.5M",
+    "hf_dataset_id": "CIawevy/TextPecker-1.5M",
     "split": ["train"],
     "subsets": ["default"]
   }

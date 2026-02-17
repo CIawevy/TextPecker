@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=$GPUS \
 MAX_NUM=12 \
 INPUT_SIZE=448 \
 swift deploy \
-    --model ByteDance/TextPecker-8B-InternVL3 \
+    --model CIawevy/TextPecker-8B-InternVL3 \
     --infer_backend vllm \
     --vllm_gpu_memory_utilization $GPU_MEM_UTILIZATION \
     --vllm_tensor_parallel_size 2 \

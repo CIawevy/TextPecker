@@ -32,7 +32,6 @@ def get_config(name):
 
 
 def general_ocr_qwen_fast_guard_vkl_beta_mrtpa():
-    #beta 4显然不会hack 目前setting clip非常好
     gpu_number = 32
     config = compressibility()
     config.dataset = os.path.join(os.getcwd(), "dataset/ocr_v2")

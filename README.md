@@ -77,6 +77,8 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 <!-- - **Feb 22, 2026:** We released optimized model checkpoints: [Qwen Image](), [SD3.5-M](), and [Flux.1-[dev]]().
 - **Feb 20, 2026:** Our Arxiv Paper is now publicly available.
 - **Feb 20, 2026:**  TextPecker has been accepted to **CVPR 2026**. -->
+- **Feb 18, 2026:** We released the LoRA weights for different TextPecker-optimized generative models, including:
+[SD3.5-M](https://huggingface.co/CIawevy/SD3.5M-TextPecker-SQPA), [Flux.1-dev](https://huggingface.co/CIawevy/Flux.1-dev-TextPecker-SQPA), [Qwen-Image](https://huggingface.co/CIawevy/QwenImage-TextPecker-SQPA). 
 - **Feb 15, 2026:** We released the official [website](https://github.com/CIawevy/TextPecker),[model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) for TextPecker.
 
 
@@ -129,46 +131,32 @@ TextPecker training, deployment, and evaluation are built on top of [ms-swift](h
 Our RL framework builds on [Flow-GRPO](https://github.com/yifan123/flow_grpo). We provide training code for optimizing text rendering models with TextPecker under `./RL/flow_grpo/`. For details, please refer to [RL](RL).
 
 
-
-
 ### Re-evaluate Benchmarks with TextPecker
+
 
 TextPecker can evaluate text structural quality and image-level or box-level semantic consistency for any text generation or editing scenarios. We provide re-evaluation instructions for the following benchmarks: OneIG-Bench, CVTG-2K, LongText, TextAtlas, LeX-Bench, and TIIF-Bench. For more details, see [EVAL](eval).
 
+## 🤗 Resources
+We fully open-source all core resources of the TextPecker ecosystem, including evaluators, Optimized VTR models, and datasets, to facilitate research and application development.
+## Evaluator
+| Variant   | Model |
+| --------- | ----- |
+| InternVL-3 | [TextPecker-8B-InternVL3](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3) |
+| Qwen3-VL   | [TextPecker-8B-Qwen3VL](https://huggingface.co/CIawevy/TextPecker-8B-Qwen3VL) |
 
+## VTR Models
+| Variant     | Model |
+| ----------- | ----- |
+| SD3.5-M     | [SD3.5M-TextPecker-SQPA](https://huggingface.co/CIawevy/SD3.5M-TextPecker-SQPA) |
+| Flux.1-dev  | [Flux.1-dev-TextPecker-SQPA](https://huggingface.co/CIawevy/Flux.1-dev-TextPecker-SQPA) |
+| Qwen-Image  | [QwenImage-TextPecker-SQPA](https://huggingface.co/CIawevy/QwenImage-TextPecker-SQPA) |
 
-<!-- ## 📊 Benchmarks
-
-### 1. Visual Understanding
-
-| Model | MME | MMBench |   MMMU | MM-Vet | MathVista |
-| ------------------- | ----------: | ----------: | -------: | -------: | ----------: |
-| Janus-Pro-7B        | -  |     79.2 |     41.0 |     50.0 |           – |
-| Qwen2.5-VL-7B      | 2347    |   83.5 | **58.6** |     67.1 |           68.2 |
-| **TextPecker**    | **2388**  |  **85.0** |     55.3 | **67.2** |    **73.1** |
-
-### 2. Text-to-Image Generation
-
-| Model        | GenEval | WISE |
-| ------------ | --------- | --------- |
-| Janus-Pro-7B | 0.80      | 0.35 | 
-| SD3-Medium   | 0.74      | - |
-| FLUX-1-dev   | 0.82      | 0.50 |
-| **TextPecker**    | 0.82  | 0.52  |
-| **TextPecker + Rewritter/CoT**    | **0.88**  | **0.70** |
-
-### 3. Image Editing
-
-| Model         | GEdit-Bench-EN (SC) | GEdit-Bench-EN (PQ) | GEdit-Bench-EN (O) | IntelligentBench | KISE-Bench | RISEBench |
-| ------------- | ---------------------: | ---------------------: | -------------------: | ------------------: | ------------: | ------------: | 
-| Step1X-Edit   | 🥉7.09                | 🥉6.76                | 🥈6.70            | 14.9               |  43.29   |  1.9  |
-| Gemini 2.0    | 6.73                  | 6.61                  | 6.32                | 🥈57.6             | 🥈62.41   |  🥈13.3  |
-| GPT-4o        | 🥇7.85              | 🥇7.62              | 🥇7.53            | 🥇78.9           | 🥇80.09   |  🥇28.9  |
-| **TextPecker**     | 🥈7.36                | 🥈6.83                | 🥉6.52                | 44.0               |  56.21   |  6.1 |
-| **TextPecker+CoT** | –                     | –                     | –                   | 🥉55.3             |  🥉60.18   |  🥉11.9 |
- -->
-
-
+### Dataset & Engine
+| Type               | Link |
+| ------------------ | ---- |
+| Evaluator Dataset  | [TextPecker-1.5M](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) |
+| VTR RL Dataset | [TextPecker-RL](RL/flow_grpo/dataset) |
+| Engine   | [TextPecker-engine](https://github.com/CIawevy/TextPecker_engine) |
 
 # Acknowledgement
 We sincerely thank 

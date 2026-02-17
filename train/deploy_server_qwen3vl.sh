@@ -17,7 +17,7 @@ cd TextPecker/train/ms-swift #replace with your own
 CUDA_VISIBLE_DEVICES=$GPUS \
 IMAGE_MAX_TOKEN_NUM=1024 \
 swift deploy \
-    --model ByteDance/TextPecker-8B-Qwen3VL  \
+    --model CIawevy/TextPecker-8B-Qwen3VL  \
     --infer_backend vllm \
     --vllm_gpu_memory_utilization $GPU_MEM_UTILIZATION \
     --vllm_tensor_parallel_size 2 \

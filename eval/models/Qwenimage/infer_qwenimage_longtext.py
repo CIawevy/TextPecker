@@ -12,7 +12,7 @@ from tqdm import tqdm
 import argparse
 from safetensors.torch import load_file
 from PIL import Image
-from peft import LoraConfig, get_peft_model, set_peft_model_state_dict, PeftModel
+from peft import LoraConfig, get_peft_model
 # // 添加画廊创建函数
 # def create_image_gallery(images, rows=2, cols=2):
 #     assert len(images) >= rows * cols, "Not enough images provided!"
