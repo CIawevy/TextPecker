@@ -54,8 +54,19 @@
 </p> -->
 
 # TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering
-
-> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en), [Yuliang Liu](https://scholar.google.com/citations?user=9uPDtI4AAAAJ&hl=zh-CN&authuser=1), [Xuecheng Wu](https://scholar.google.com/citations?user=MuTEp7sAAAAJ&hl=zh-CN), [An-Lan Wang](https://scholar.google.com/citations?user=mazWHncAAAAJ&hl=en), [Hao Feng](https://scholar.google.com/citations?user=aB8DspEAAAAJ&hl=zh-CN), [Dingkang Yang](https://scholar.google.com/citations?user=jvlDhkcAAAAJ&hl=zh-CN), [Chao Feng](https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AIfU4H7WFVeWuU5GeELC6VB1oKluoC7ZQlQxUCGcDWqHhdX2iIfDMrfcw1Jjj3dUejmTU2gS8q8ey1quzooAZ0VLTTBW4O5iVcfeqpf_7HU&user=4eEryIsAAAAJ), [Can Huang](https://scholar.google.com/citations?user=ON9Rx-IAAAAJ&hl=zh-CN), [Jingqun Tang](https://scholar.google.com/citations?user=OxQXSioAAAAJ&hl=zh-CN)<sup>†</sup>, [Xiang Bai](https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=en)<sup>†</sup>
+> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en)<sup>1,2,*</sup>,
+> [Yuliang Liu](https://scholar.google.com/citations?user=9uPDtI4AAAAJ&hl=zh-CN&authuser=1)<sup>1</sup>,
+> [Xuecheng Wu](https://scholar.google.com/citations?user=MuTEp7sAAAAJ&hl=zh-CN)<sup>2</sup>,
+> [An-Lan Wang](https://scholar.google.com/citations?user=mazWHncAAAAJ&hl=en)<sup>2</sup>,
+> [Hao Feng](https://scholar.google.com/citations?user=aB8DspEAAAAJ&hl=zh-CN)<sup>2</sup>,
+> [Dingkang Yang](https://scholar.google.com/citations?user=jvlDhkcAAAAJ&hl=zh-CN)<sup>2</sup>,
+> [Chao Feng](https://scholar.google.com/citations?user=4eEryIsAAAAJ&hl=en)<sup>2</sup>,
+> [Can Huang](https://scholar.google.com/citations?user=ON9Rx-IAAAAJ&hl=zh-CN)<sup>2</sup>,
+> [Jingqun Tang](https://scholar.google.com/citations?user=OxQXSioAAAAJ&hl=zh-CN)<sup>2,†</sup>,
+> [Xiang Bai](https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=en)<sup>1,✉</sup>
+>
+> <sup>1</sup> Huazhong University of Science & Technology <sup>2</sup> ByteDance
+> <sup>†</sup> Project Lead. <sup>✉</sup> Corresponding Author.
 > ## Abstract
 >Visual Text Rendering (VTR) remains a critical challenge in text‑to‑image generation, where even advanced models frequently produce text with structural anomalies such as distortion, blurriness, and misalignment.
 However, we find that leading MLLMs and specialist OCR models largely fail to perceive these structural anomalies, creating a critical bottleneck for both VTR evaluation and RL‑based optimization.   
@@ -65,7 +76,7 @@ a plug-and-play structural anomaly perceptive RL strategy that mitigates noisy r
 To enable this capability, we construct a recognition dataset with character‑level structural‑anomaly annotations and develop a stroke‑editing synthesis engine to expand structural‑error coverage. 
 Experiments show that TextPecker consistently improves diverse text‑to‑image models; even on the well‑optimized Qwen‑Image, it significantly yields average gains of 4% in structural fidelity and 8.7% in semantic alignment for Chinese text rendering, establishing a new state-of-the-art in high-fidelity VTR.
 Our work fills a gap in VTR optimization, providing a foundational step towards  reliable and structural faithful visual text generation.
-
+<p align="center"><img src="assets/teaser.webp" width="95%"></p>
 <p align="center"><img src="assets/method.png" width="95%"></p>
 <!-- <p align="center"><img src="assets/motivation.png" width="95%"></p> -->
 <!-- <p align="center"><img src="assets/data_pipe.png" width="95%"></p> -->
