@@ -54,7 +54,7 @@
 </p> -->
 
 # TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering
-> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en)<sup>1,2,*</sup>,
+> [Hanshen Zhu](https://scholar.google.com/citations?user=1tjNZlcAAAAJ&hl=en)<sup>1,*</sup>,
 > [Yuliang Liu](https://scholar.google.com/citations?user=9uPDtI4AAAAJ&hl=zh-CN&authuser=1)<sup>1</sup>,
 > [Xuecheng Wu](https://scholar.google.com/citations?user=MuTEp7sAAAAJ&hl=zh-CN)<sup>2</sup>,
 > [An-Lan Wang](https://scholar.google.com/citations?user=mazWHncAAAAJ&hl=en)<sup>2</sup>,
@@ -85,9 +85,9 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 [//]: # (This repository represents the official implementation of the paper titled "TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering".)
 
 ## 📢 News
-<!-- - **Feb 22, 2026:** We released optimized model checkpoints: [Qwen Image](), [SD3.5-M](), and [Flux.1-[dev]]().
-- **Feb 20, 2026:** Our Arxiv Paper is now publicly available.
-- **Feb 20, 2026:**  TextPecker has been accepted to **CVPR 2026**. -->
+<!--
+- **Feb 20, 2026:** Our [Arxiv Paper](https://arxiv.org/abs/2602.07206) is now publicly available.-->
+- **Feb 21, 2026:**  Our TextPecker has been accepted to CVPR 2026. 
 - **Feb 18, 2026:** We released the LoRA weights for different TextPecker-optimized generative models, including:
 [SD3.5-M](https://huggingface.co/CIawevy/SD3.5M-TextPecker-SQPA), [Flux.1-dev](https://huggingface.co/CIawevy/Flux.1-dev-TextPecker-SQPA), [Qwen-Image](https://huggingface.co/CIawevy/QwenImage-TextPecker-SQPA). 
 - **Feb 15, 2026:** We released the official [website](https://github.com/CIawevy/TextPecker), [model](https://huggingface.co/CIawevy/TextPecker-8B-InternVL3), [dataset](https://huggingface.co/datasets/CIawevy/TextPecker-1.5M) for TextPecker.
