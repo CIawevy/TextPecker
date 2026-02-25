@@ -9,7 +9,7 @@
       alt="TextPecker Website"
     />
   </a>
-  <a href="https://arxiv.org/abs/2505.14683">
+  <a href="https://arxiv.org/abs/2602.20903">
     <img
       src="https://img.shields.io/badge/TextPecker-Paper-red?logo=arxiv&logoColor=red"
       alt="TextPecker Paper on arXiv"
@@ -85,8 +85,8 @@ Our work fills a gap in VTR optimization, providing a foundational step towards 
 [//]: # (This repository represents the official implementation of the paper titled "TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering".)
 
 ## 📢 News
-<!--
-- **Feb 20, 2026:** Our [Arxiv Paper](https://arxiv.org/abs/2602.07206) is now publicly available.-->
+
+- **Feb 24, 2026:** Our [Arxiv Paper](https://arxiv.org/abs/2602.20903) is now publicly available.
 - **Feb 21, 2026:**  Our TextPecker has been accepted to CVPR 2026. 
 - **Feb 18, 2026:** We released the LoRA weights for different TextPecker-optimized generative models, including:
 [SD3.5-M](https://huggingface.co/CIawevy/SD3.5M-TextPecker-SQPA), [Flux.1-dev](https://huggingface.co/CIawevy/Flux.1-dev-TextPecker-SQPA), [Qwen-Image](https://huggingface.co/CIawevy/QwenImage-TextPecker-SQPA). 
@@ -203,7 +203,7 @@ If you find TextPecker useful in your research or work, please cite our paper:
 @article{zhu2026TextPecker,
   title   = {TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering},
   author  = {Zhu, Hanshen and Liu, Yuliang and Wu, Xuecheng and Wang, An-Lan and Feng, Hao and Yang, Dingkang and Feng, Chao and Huang, Can and Tang, Jingqun and Bai, Xiang},
-  journal = {arXiv preprint arXiv:},
+  journal = {arXiv preprint arXiv:2602.20903},
   year    = {2026}
 }
 ```
