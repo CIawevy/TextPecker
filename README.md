@@ -70,7 +70,7 @@
 > ## Abstract
 >Visual Text Rendering (VTR) remains a critical challenge in text‑to‑image generation, where even advanced models frequently produce text with structural anomalies such as distortion, blurriness, and misalignment.
 However, we find that leading MLLMs and specialist OCR models largely fail to perceive these structural anomalies, creating a critical bottleneck for both VTR evaluation and RL‑based optimization.   
-As a result, even state‑of‑the‑art generators (e.g., SeedDream4.0, Qwen‑Image) still struggle to render structurally faithful text.
+As a result, even state‑of‑the‑art generators (e.g., Seedream4.0, Qwen‑Image) still struggle to render structurally faithful text.
 To address this, we propose **TextPecker**,
 a plug-and-play structural anomaly perceptive RL strategy that mitigates noisy reward signals and works with any text-to-image generator. 
 To enable this capability, we construct a recognition dataset with character‑level structural‑anomaly annotations and develop a stroke‑editing synthesis engine to expand structural‑error coverage. 
