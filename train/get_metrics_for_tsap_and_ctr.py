@@ -267,8 +267,8 @@ def run_evaluation(result_file, model_name):
         update_metrics('total')
         
         # 计算识别指标
-        rec_text = re.sub(r'[<>]', '', rec_text)
-        gt_rec_text = re.sub(r'[<>]', '', gt_rec_text)
+        rec_text = rec_text.replace('<#>', '#').replace('<###>', '###')
+        gt_rec_text = gt_rec_text.replace('<#>', '#').replace('<###>', '###')
         pred_text_list = rec_text.split(" ")
         gt_text_list = gt_rec_text.split(" ")
         clean_pred_text_list = extract_text_info(pred_text_list)

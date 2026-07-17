@@ -293,9 +293,6 @@ def extract_rec_texts(s):
                 # 将\"转换为双引号
                 text = text.replace('\\"', '"')
                 
-                # 移除HTML标签或特殊标记
-                text = re.sub(r'<[^>]*>', '', text)
-                
                 return text
             except:
                 return text
@@ -450,7 +447,7 @@ def classify_results(gt_list, test_list):
 
     
 def get_gned_score(rec_text,ref_target,cls=False):
-    rec_text = re.sub(r'[<>]', '', rec_text)
+    rec_text = rec_text.replace('<#>', '#').replace('<###>', '###')
     if '#' not in ref_target:
         pass
     elif '$' not in ref_target:
@@ -477,6 +474,7 @@ def get_gned_score(rec_text,ref_target,cls=False):
 def get_scaled_quality_score(rec_text, amplify_factor=1.0):
     #  N_P：生成文本的总字符数
     processed_text = pre_c(rec_text)  # 预处理文本（你定义的pre_c函数）
+    processed_text = processed_text.replace('<#>', '#').replace('<###>', '###')
     N_P = len(processed_text)
     if N_P == 0:
         return 0.0  # 无字符时得分0
