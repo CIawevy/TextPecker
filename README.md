@@ -170,6 +170,10 @@ All fully open-sourced core resources for TextPecker are listed below:
 | VTR RL Dataset | [TextPecker-RL](RL/flow_grpo/dataset) |
 | Engine   | [TextPecker-engine](https://github.com/CIawevy/TextPecker_engine) |
 
+### Community Resources
+
+- [AIFont Text Rendering Dataset](https://github.com/Funovate-Technology/aifont-text-rendering): AI-generated styled lettering across English, Chinese, Arabic, Japanese, German, Spanish, and Portuguese, with letter-level error annotations and a human-reviewed subset. Released under CC BY 4.0. Thanks to Jack and the AIFont team for sharing this resource!
+
 # Acknowledgement
 We sincerely thank 
 [ms-swift](https://github.com/modelscope/ms-swift#), 
@@ -200,11 +204,12 @@ We also thank the evaluation benchmarks including
 ## ✍️ Citation
 If you find TextPecker useful in your research or work, please cite our paper:
 ```bibtex
-@article{zhu2026TextPecker,
-  title   = {TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering},
-  author  = {Zhu, Hanshen and Liu, Yuliang and Wu, Xuecheng and Wang, An-Lan and Feng, Hao and Yang, Dingkang and Feng, Chao and Huang, Can and Tang, Jingqun and Bai, Xiang},
-  journal = {arXiv preprint arXiv:2602.20903},
-  year    = {2026}
+@inproceedings{TextPecker,
+  title={TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering},
+  author={Zhu, Hanshen and Liu, Yuliang and Wu, Xuecheng and Wang, An-Lan and Feng, Hao and Yang, Dingkang and Feng, Chao and Huang, Can and Tang, Jingqun and Bai, Xiang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={22059--22069},
+  year={2026}
 }
 ```
 
